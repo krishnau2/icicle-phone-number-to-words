@@ -9,7 +9,7 @@ class Dictionary
     end
   end
   
-  def is_valid_word?(word)
-    @words.include?(word)
+  def find_valid_words(combination_words)
+    combination_words & @words
   end
 end
