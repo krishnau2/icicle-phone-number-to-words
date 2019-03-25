@@ -32,5 +32,5 @@ That meanse for decoding the giving number you can first take two digits at a ti
 
 * If you are not finding any actual words from dictionary for "2548" then no need to check "57"
 
-* if you found couple of actual words for "2548" and "57" then find the combination of these two to get the comblete combination. 
+* if you find couple of actual words for "2548" and "57" then find the combination of these two to get the comblete combination. 
  
