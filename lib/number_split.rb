@@ -5,6 +5,7 @@ class NumberSplit
     @window = @min_size
   end
 
+  # Will generate the split based on the length and min_size
   def combinations
     final_combinations = []    
 
@@ -18,19 +19,20 @@ class NumberSplit
           combinations.push(@min_size)
           remaining_length = remaining_length - @min_size
         else
+          # If remianing legth is less than min_size add the reamining to the last.
           combinations[-1] = combinations[-1] + remaining_length
           remaining_length = 0
         end
       end
 
+      # Taking the permutation of the combinations generated since position of the elements in the combination is needed.
+      # eg: [3, 3, 4], [3, 4, 3] & [4, 3, 3] are different. combination considers it as same.
       permutations = combinations.permutation.to_a.uniq
       permutations.each{|c| final_combinations.push(c)}
       @window = @window + 1
     end
 
-    # puts final_combinations.uniq.inspect
     return final_combinations.uniq
   end
-  
   
 end

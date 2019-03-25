@@ -6,12 +6,18 @@ describe "Dictionary" do
     expect(Dictionary.new.words.count).to be > 0
   end
 
-  # it ".is_valid_word?(text) should return true for valid word" do
-  #   expect(Dictionary.new.is_valid_word?("motor")).to be true
-  # end
+  it ".find_valid_words should return all the matching words" do
+    @dictionary = Dictionary.new
 
-  # it ".is_valid_word?(text) should return false for invalid word" do
-  #   expect(Dictionary.new.is_valid_word?("mmm")).to be false
-  # end
+    words = ["motor", "usual", "truck"]
+    expect(@dictionary.find_valid_words(words)).to eq words
+  end
+
+  it ".find_valid_words should return only the matching words" do
+    @dictionary = Dictionary.new
+
+    words = ["motor", "usual", "xyz"]
+    expect(@dictionary.find_valid_words(words)).to eq ["motor", "usual"]
+  end
   
 end

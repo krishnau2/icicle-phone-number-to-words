@@ -22,15 +22,12 @@ class WordGenerator
     @dictionary = Dictionary.new
     @words = []
     @combination_words = []
-    @final_combination_words = []
   end
 
   def generate    
     @number_split_cominations = NumberSplit.new(@length).combinations
-    # @number_split_cominations = [[3, 3, 4]]
     
     @number_split_cominations.each do | split | #[3, 3, 4]
-      puts "Split: #{split}"
       @words = []
       starting_pointer = 0;      
       
@@ -44,29 +41,31 @@ class WordGenerator
 
         valid_words = find_valid_words(split_word_combinations)
 
+        # If this combination couldn't find any valid words then not considering the remaining combinations
         if valid_words.length == 0
-
           @words = []
-          puts "Breaking....."
           break  
         end
 
         @words << valid_words
       end
-      puts "Words: #{@words.inspect}"
 
       @combination_words << @words unless @words.empty?
     end
 
-    # puts "Combination Words: #{@combination_words.inspect}"
+    return format_to_the_required_output
+  end
+
+  def format_to_the_required_output
+    final_combination_words = []
 
     @combination_words.each do |combination|
       combination.shift.product(*combination).each do |combi|
-        @final_combination_words << combi
+        final_combination_words << combi
       end      
     end
 
-    return @final_combination_words
+    final_combination_words
   end
 
   def find_valid_words(word_combination)    
@@ -78,13 +77,5 @@ class WordGenerator
     @number.split('').map { |number| NUMBER_TO_LETTER_MAP[number] }
   end
 
-  
-  
 end
-
-
-
-# k = WordGenerator.new("6686787825")
-# mapping = k.letter_mapping_for_number
-# puts mapping.inspect
 
