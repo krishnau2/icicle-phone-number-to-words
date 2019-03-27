@@ -1,8 +1,10 @@
 class NumberSplit
+  MIN_SIZE = 3
+
   def initialize(length)    
     @length = length
-    @min_size = 3
-    @window = @min_size
+    # @min_size = 3
+    @window = MIN_SIZE
   end
 
   # Will generate the split based on the length and min_size
@@ -15,9 +17,9 @@ class NumberSplit
       remaining_length = @length - @window
       
       while remaining_length > 0 
-        if remaining_length >= @min_size
-          combinations.push(@min_size)
-          remaining_length = remaining_length - @min_size
+        if remaining_length >= MIN_SIZE
+          combinations.push(MIN_SIZE)
+          remaining_length = remaining_length - MIN_SIZE
         else
           # If remianing legth is less than min_size add the reamining to the last.
           combinations[-1] = combinations[-1] + remaining_length

@@ -11,7 +11,11 @@
 
 * This will prompt the user to give the phone number
 
-* To run test: rspec
+* To run test: TESTING=true rspec
+
+# Note
+
+* It's open for any length, so no max length check is implemented.
 
 # Logic
 
@@ -33,4 +37,13 @@ That meanse for decoding the giving number you can first take two digits at a ti
 * If you are not finding any actual words from dictionary for "2548" then no need to check "57"
 
 * if you found couple of actual words for "2548" and "57" then find the combination of these two to get the comblete combination. 
+
+# Output
+
+Please Enter the phone number
+2282668687
+Generating words from 2282668687, Please wait.
+[["act", "boo", "tots"], ["act", "boo", "tour"], ["act", "con", "tots"], ["act", "con", "tour"], ["act", "coo", "tots"], ["act", "coo", "tour"], ["bat", "boo", "tots"], ["bat", "boo", "tour"], ["bat", "con", "tots"], ["bat", "con", "tour"], ["bat", "coo", "tots"], ["bat", "coo", "tour"], ["cat", "boo", "tots"], ["cat", "boo", "tour"], ["cat", "con", "tots"], ["cat", "con", "tour"], ["cat", "coo", "tots"], ["cat", "coo", "tour"], ["act", "boot", "mus"], ["act", "boot", "nus"], ["act", "boot", "our"], ["act", "coot", "mus"], ["act", "coot", "nus"], ["act", "coot", "our"], ["bat", "boot", "mus"], ["bat", "boot", "nus"], ["bat", "boot", "our"], ["bat", "coot", "mus"], ["bat", "coot", "nus"], ["bat", "coot", "our"], ["cat", "boot", "mus"], ["cat", "boot", "nus"], ["cat", "boot", "our"], ["cat", "coot", "mus"], ["cat", "coot", "nus"], ["cat", "coot", "our"], ["acta", "mot", "mus"], ["acta", "mot", "nus"], ["acta", "mot", "our"], ["acta", "not", "mus"], ["acta", "not", "nus"], ["acta", "not", "our"], ["acta", "oot", "mus"], ["acta", "oot", "nus"], ["acta", "oot", "our"], ["acta", "mounts"], ["act", "amounts"], ["act", "contour"], ["bat", "amounts"], ["bat", "contour"], ["cat", "amounts"], ["cat", "contour"], ["catamounts"]]
+
+Time Elapsed: 1.49216628074646
  
