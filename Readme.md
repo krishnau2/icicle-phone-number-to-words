@@ -1,9 +1,9 @@
 # Number to word finder
 
 
-* git clone git@github.com:krishnau2/icicle_number_to_word.git
+* git clone git@github.com:krishnau2/icicle-phone-number-to-words.git
 
-* cd icicle_number_to_word
+* cd icicle-phone-number-to-words
 
 * bundle install
 
